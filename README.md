@@ -1,1 +1,1 @@
-# puppet-vro-vro_plugin_sshd
+puppet-vro-plugin_sshd
