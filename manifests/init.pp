@@ -3,7 +3,9 @@
 ## Requirements for Augeas
 #### Ensure both Augeas and ruby-augeas 0.3.0+ bindings are installed and working as normal.
 
-class ssh_config::vro_plugin_sshd {
+include augeas
+
+class ssh_config {
 
 $hostname = $::fqdn
 
