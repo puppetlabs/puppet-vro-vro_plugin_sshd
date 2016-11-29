@@ -3,7 +3,7 @@
 ## Requirements for Augeas
 #### Ensure both Augeas and ruby-augeas 0.3.0+ bindings are installed and working as normal.
 
-include augeas
+#include augeas
 
 class vro_sshd {
 
