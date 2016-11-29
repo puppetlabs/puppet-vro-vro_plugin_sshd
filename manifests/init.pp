@@ -5,7 +5,7 @@
 
 #include augeas
 
-class vro_sshd {
+class vro_plugin_sshd {
 
 $hostname = $::fqdn
 
