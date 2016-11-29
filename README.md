@@ -23,6 +23,9 @@ These are the options that are changed/managed
 
 ## Requirements
 
+mod 'puppet-augeas'
+  :git => https://github.com/camptocamp/puppet-augeas.git
+
 mod 'augeasproviders_core',
   :git => 'https://github.com/hercules-team/augeasproviders_core.git',
 
