@@ -5,7 +5,7 @@
 
 include augeas
 
-class ssh_config {
+class vro_sshd {
 
 $hostname = $::fqdn
 
