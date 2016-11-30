@@ -11,7 +11,7 @@
 
 ## Description
 
-This module manages the /etc/ssh/ssh_config file to enable a few key options.
+This module manages the /etc/ssh/sshd_config file to enable a few key options.
 
 ## What
 These are the options that are changed/managed
@@ -23,16 +23,10 @@ These are the options that are changed/managed
 
 ## Requirements
 
-mod 'puppet-augeas'
-  :git => https://github.com/camptocamp/puppet-augeas.git
+* puppetlabs/stdlib (>= 3.2.0 <5.0.0) - https://forge.puppet.com/puppetlabs/stdlib
 
-mod 'augeasproviders_core',
+* Ensure Augeas bindings are installed and working as normal.
+  * mod 'augeasproviders_core',
   :git => 'https://github.com/hercules-team/augeasproviders_core.git',
 
-mod 'puppetlabs-ruby', '0.5.0'
-
-mod 'augeasproviders_ssh',
-  :git => 'https://github.com/hercules-team/augeasproviders_ssh.git',
-
-mod 'vro_plugin_sshd',
-  :git => 'https://github.com/tspeigner/puppet-vro-plugin_sshd',
+* Ensure ruby-augeas 0.3.0+ bindings are installed and working as normal.
