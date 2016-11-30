@@ -5,10 +5,9 @@
 ## Requirements for Augeas
 #### Ensure both Augeas and ruby-augeas 0.3.0+ bindings are installed and working as normal.
 
+include vro_plugin_sshd::ruby_augeas
 
 class vro_plugin_sshd {
-
-include sshd_config::ruby_augeas
 
   ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
   sshd_config { "PermitRootLogin":
