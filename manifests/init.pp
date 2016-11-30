@@ -1,13 +1,12 @@
-## Include augeasproviders_ssh module from forge.
-## https://forge.puppet.com/herculesteam/augeasproviders_ssh
+## Include augeasproviders_ssh module from forge or github.
+#### https://forge.puppet.com/herculesteam/augeasproviders_ssh
+## Include augeasproviders_core from forge or github.
+#### https://github.com/hercules-team/augeasproviders_core
 ## Requirements for Augeas
 #### Ensure both Augeas and ruby-augeas 0.3.0+ bindings are installed and working as normal.
 
-#include augeas
 
 class vro_plugin_sshd {
-
-$hostname = $::fqdn
 
   ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
   sshd_config { "PermitRootLogin":
@@ -27,4 +26,13 @@ $hostname = $::fqdn
     value     => "no",
 
   }
+
+  class sshd_config::ruby-augeas {
+
+    package { 'ruby-augeas':
+      ensure => 'installed',
+    }
+
+  }
+
 }
