@@ -7,7 +7,7 @@
 
 class vro_plugin_sshd {
 
-include vro_plugin_sshd::ruby_augeas
+#include vro_plugin_sshd::ruby_augeas
 
   ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
   sshd_config { "PermitRootLogin":
