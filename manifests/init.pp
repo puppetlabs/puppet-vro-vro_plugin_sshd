@@ -10,7 +10,7 @@ class vro_plugin_sshd {
 $hostname = $::fqdn
 
   ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
-  ssh_config { "PermitRootLogin":
+  sshd_config { "PermitRootLogin":
     ensure => present,
     host   => $hostname,
     value  => "yes",
@@ -18,13 +18,13 @@ $hostname = $::fqdn
 
 ## Allow PasswordAuthentication for users and not just keys
 
-  ssh_config { "PasswordAuthentication":
+  sshd_config { "PasswordAuthentication":
     ensure    => present,
     host      => $hostname,
     value     => "yes",
   }
 
-  ssh_config { "ChallengeResponseAuthentication":
+  sshd_config { "ChallengeResponseAuthentication":
     ensure    => present,
     host      => $hostname,
     value     => "no",
