@@ -12,7 +12,6 @@ $hostname = $::fqdn
   ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
   sshd_config { "PermitRootLogin":
     ensure => present,
-    host   => $hostname,
     value  => "yes",
   }
 
@@ -20,13 +19,11 @@ $hostname = $::fqdn
 
   sshd_config { "PasswordAuthentication":
     ensure    => present,
-    host      => $hostname,
     value     => "yes",
   }
 
   sshd_config { "ChallengeResponseAuthentication":
     ensure    => present,
-    host      => $hostname,
     value     => "no",
 
   }
