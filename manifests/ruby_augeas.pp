@@ -1,4 +1,4 @@
-class sshd_config::ruby_augeas {
+class vro_plugin_sshd::ruby_augeas {
 
   package { 'ruby-augeas':
     ensure => 'installed',
