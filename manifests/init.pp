@@ -4,14 +4,12 @@
 #### https://github.com/hercules-team/augeasproviders_core
 
 class vro_plugin_sshd {
-  
-  ## If you are using root then enable root login, else use vro-plugin_user created by vro-plugin.
+
+  ## If you are not using root ssh login from VRO to Puppet Enterprise then comment out this resource.
   sshd_config { "PermitRootLogin":
     ensure => present,
     value  => "yes",
   }
-
-## Allow PasswordAuthentication for users and not just keys
 
   sshd_config { "PasswordAuthentication":
     ensure    => present,
