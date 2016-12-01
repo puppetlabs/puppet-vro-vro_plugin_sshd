@@ -26,8 +26,10 @@ These are the options that are changed/managed
 * puppetlabs/stdlib (>= 3.2.0 <5.0.0) - https://forge.puppet.com/puppetlabs/stdlib
 
 * Augeas bindings are installed and working as normal.
+  
   mod 'herculesteam-augeasproviders_core', '2.1.3'
   
 
 * Augeas Providers for SSH
+  
   mod 'herculesteam-augeasproviders_ssh', '2.5.0'
